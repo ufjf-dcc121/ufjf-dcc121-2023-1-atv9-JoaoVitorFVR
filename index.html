@@ -6,8 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semana 9: Forms</title>
     <style>
-        p>span{
+        .pessoa > div{
             color: darkgreen;
+            display: inline;
+        }
+        div.sobrenome{
+            color: darkblue;
+        }
+        .pessoa > .idade{
+            color: darkred;
+        }
+        .pessoa > .sobrenome::before{
+            content: ' ';
+            color: black;
+        }
+        .pessoa > .idade::before{
+            content: ', ';
+            color: black;
         }
     </style>
 </head>
@@ -29,7 +44,7 @@
         <h2>Visitas passadas:</h2>
         <ol></ol>
     </main>
-    
+
     <script>
         const form = document.querySelector("form");
         form.addEventListener("submit", aoEnviar);
